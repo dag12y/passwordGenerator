@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Password-Generator</title>
+    <title>Secure Password Generator</title>
 </head>
 <body>
     <div class="container">
-        <h1>Generate a <span>random password</span></h1>
-        <p>never use an insecure password again.</p>
+        <div class="header">
+            <h1>Generate a <span>random password</span></h1>
+            <p>never use an insecure password again.</p>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="length">Password length : <span id="length-value">12</span></label>
+                <input type="range" id="length" min="4" max="32" value="12">
+            </div>
+
+        </div>
         <button>Generate Passwords</button>
         <hr>
         <div class="passwords">
