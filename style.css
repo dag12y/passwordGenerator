@@ -113,6 +113,58 @@ label {
     transform: scale(1.1);
 }
 
+.character-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.option input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.option label {
+    font-size: 0.95rem;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.strength-meter {
+    margin-top: 0.5rem;
+}
+
+.strength-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.meter {
+    height: 8px;
+    background-color: var(--gray);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.meter .level {
+    height: 100%;
+    width: 0%;
+    background-color: var(--danger);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
 button {
     background-color: #10b981;
     color: white;

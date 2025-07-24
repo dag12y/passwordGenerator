@@ -20,6 +20,37 @@
                 <input type="range" id="length" min="4" max="32" value="12">
             </div>
 
+            <div class="character-options">
+                <div class="option">
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">Uppercase (A-Z)</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Lowercase (a-z)</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers">Numbers (0-9)</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="symbols" checked>
+                    <label for="symbols">Symbols (!@#$%)</label>
+                </div>
+            </div>
+
+            <div class="strength-meter">
+                <div class="strength-labels">
+                    <span>Weak</span>
+                    <span>Medium</span>
+                    <span>Strong</span>
+                    <span>Very Strong</span>
+                </div>
+                <div class="meter">
+                    <div class="level"></div>
+                </div>
+            </div>
+
         </div>
         <button>Generate Passwords</button>
         <hr>
