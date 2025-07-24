@@ -1,170 +1,144 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: #1c1c1c;
+    font-family: Inter, sans-serif;
+    color: #d5d4d8;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    padding: 1rem;
 }
+
 .container {
-    width: 550px;
-    height: 550px;
     background-color: #1f2937;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
     position: relative;
 }
+
 h1 {
-    position: absolute;
-    width: 360px;
-    height: 80px;
-    top: 115px;
-    left: 52px;
-    font-family: Karla;
+    font-family: Karla, sans-serif;
+    font-size: 2rem;
     font-weight: 800;
-    font-style: ExtraBold;
-    font-size: 40px;
-    line-height: 40px;
-    letter-spacing: -2.5%;
-    color: #d5d4d8;
+    text-align: center;
 }
+
 h1 span {
     color: #10b981;
 }
+
 p {
-    position: absolute;
-    color: #d5d4d8;
-    width: 372px;
-    height: 28px;
-    top: 205px;
-    left: 52px;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 1.1rem;
+    text-align: center;
 }
+
 button {
-    position: absolute;
-    width: 191px;
-    height: 42px;
-    top: 284px;
-    left: 52px;
+    background-color: #10b981;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 6px;
-    padding-top: 9px;
-    padding-right: 17px;
-    padding-bottom: 9px;
-    padding-left: 15px;
-    gap: 12px;
-    background-color: #10b981;
-    font-family: Inter;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #fff;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
+
+button:hover {
+    background-color: #0e9e6d;
+}
+
 hr {
-    position: absolute;
-    width: 446px;
-    top: 361px;
-    left: 52px;
-    border-width: 1px;
-    border: 1px solid #2f3e53;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #2f3e53;
 }
+
 .passwords {
-    position: absolute;
-    height: 39px;
-    top: 396px;
-    left: 52px;
     display: flex;
+    gap: 1rem;
+    width: 100%;
     justify-content: space-between;
-    width: 440px;
 }
+
 .passwords span {
-    position: relative;
     background-color: #273549;
-    width: 211px;
+    flex: 1;
+    padding: 0.5rem;
     border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Inter;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 16px;
-    line-height: 32px;
     text-align: center;
     color: #55f991;
+    font-weight: 500;
+    position: relative;
     cursor: pointer;
+    font-size: 1rem;
 }
+
 .passwords span::after {
     content: "\f0c5";
     font-family: "Font Awesome 6 Free";
+    font-weight: 900;
     position: absolute;
-    right: 10px;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: #55f991;
 }
+
 .pop-out {
     position: absolute;
-    bottom: 20px;
-    left: 211px;
-    height: 40px;
-    width: 150px;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
     background-color: #10b981;
-    border-radius: 10px;
-    font-size: 20px;
-    text-transform: capitalize;
-    font-weight: 400;
-    font-family: Inter;
-    display: flex;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
     opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .pop-out.show {
     opacity: 1;
-    transform: translateY(0);
 }
-@media (max-width: 480px) {
-    .container {
-        width: 550px;
-        height: 550px;
-        background-color: #1f2937;
-        
-    }
-    hr {
-        width: 80%;
-        position: absolute;
-        left: 10%;
-        border-width: 1px;
-        border: 1px solid #2f3e53;
-    }
+
+@media (max-width: 500px) {
     .passwords {
-        left: 10%;
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
+        flex-direction: column;
+        gap: 0.75rem;
     }
-    .passwords span {
-        width: 47%;
-        border-radius: 6px;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+
+    .passwords span::after {
+        right: 12px;
     }
-    .pop-out {
-        position: absolute;
-        bottom: 20px;
-        left: 40%;
-        transform: translateX(-40%);
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.95rem;
+        width: 100%;
     }
 }
